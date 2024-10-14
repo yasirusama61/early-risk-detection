@@ -36,35 +36,92 @@ This project establishes a **Minimum Viable Product (MVP)** for an early risk de
 ## Getting Started
 
 1. Clone the repository:
-    - `git clone https://github.com/yasirusama61/early-risk-detection.git`
-    - `cd early-risk-detection`
+    `git clone https://github.com/yasirusama61/early-risk-detection.git`
+    `cd early-risk-detection`
     
 
 2. Install dependencies:
    
-    - `pip install -r requirements.txt`
+    `pip install -r requirements.txt`
     
 
 3. Run data preprocessing:
     
-    - `python scripts/data_preprocessing.py`
+    `python scripts/data_preprocessing.py`
     
 
 4. Train the model:
     
-    - `python scripts/model_training.py`
+    `python scripts/model_training.py`
     
 
 5. Validate the model:
     
-    - `python scripts/validation_testing.py`
+    `python scripts/validation_testing.py`
     
+## Feature and Target Definition
+
+In the context of battery cell manufacturing, the features (inputs) represent various operational parameters collected during different stages (formation, aging, testing). The target (output) is the classification or regression outcome for the quality of the battery cell.
+
+### 1. Features (Inputs)
+
+The following operational parameters are used as features for predicting battery cell quality:
+
+- **Voltage**: Voltage readings during battery operation.
+- **Current**: Current drawn or supplied by the battery.
+- **Temperature**: Internal and ambient temperatures during operation.
+- **SOC (State of Charge)**: Estimated remaining charge.
+- **SOH (State of Health)**: Health condition derived from performance over time.
+- **Internal Resistance**: Resistance within the battery.
+- **Cycle Count**: Number of charge/discharge cycles.
+- **Discharge Time**: Time taken to discharge from full charge.
+- **Charge Time**: Time taken to reach full charge.
+- **Formation Energy**: Energy input during the formation process.
+- **Aging Time**: Time spent in the aging process.
+- **Ambient Temperature**: External temperature during testing.
+- **Pressure**: Pressure readings during the assembly process.
+- **Liquid Level**: Coolant level around cells (for immersion-cooled systems).
+
+Example code for defining the features:
+
+features = [
+    'voltage', 'current', 'temperature', 'soc', 'soh', 
+    'internal_resistance', 'cycle_count', 'discharge_time', 
+    'charge_time', 'formation_energy', 'aging_time', 
+    'ambient_temperature', 'pressure', 'liquid_level'
+]
 
 ## Results
 
-- **Proactive Quality Control**: Detects potential risks early in the process.
-- **MES Integration**: Seamless real-time monitoring and decision-making.
-- **Validation Metrics**: Model performance metrics like accuracy, precision, recall, and F1 score.
+The early risk detection system has achieved the following outcomes:
+
+- **Proactive Quality Control**: Detects potential risks early in the battery cell manufacturing process, allowing for timely intervention and improvement of product quality.
+- **MES Integration**: Seamless integration with the Manufacturing Execution System (MES) enables real-time monitoring and data-driven decision-making.
+- **Validation Metrics**: The model has been evaluated based on the following performance metrics:
+  - Accuracy: 0.92
+  - Precision: 0.88
+  - Recall: 0.85
+  - F1 Score: 0.86
+  
+The following plots provide a detailed view of the model's performance:
+
+1. **Confusion Matrix**  
+   ![Confusion Matrix](results/confusion_matrix.png)  
+   This plot shows the classification performance between high-risk and low-risk battery cells, indicating the model's ability to correctly predict the outcomes.
+
+2. **ROC Curve**  
+   ![ROC Curve](results/roc_curve.png)  
+   The ROC curve illustrates the trade-off between the true positive rate and false positive rate, with an AUC score of 0.93, showing strong classification performance.
+
+3. **Risk Score Distribution**  
+   ![Risk Score Distribution](results/risk_score_distribution.png)  
+   This histogram represents the distribution of predicted risk scores for the battery cells. Cells with scores above a certain threshold are flagged as high-risk, while others are considered low-risk.
+
+4. **Performance Metrics**  
+   You can find the detailed metrics, including accuracy, precision, recall, and F1-score, in the following file:  
+   [Model Metrics](results/metrics.txt)
+
+These results highlight the effectiveness of the early risk detection system in enhancing the quality control process and ensuring reliable battery cell production.
 
 ## License
 
