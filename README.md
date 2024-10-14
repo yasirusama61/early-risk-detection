@@ -36,30 +36,29 @@ This project establishes a **Minimum Viable Product (MVP)** for an early risk de
 ## Getting Started
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/early-risk-detection.git
-    cd early-risk-detection
-    ```
+    - `git clone https://github.com/yasirusama61/early-risk-detection.git`
+    - `cd early-risk-detection`
+    
 
 2. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+   
+    - `pip install -r requirements.txt`
+    
 
 3. Run data preprocessing:
-    ```bash
-    python scripts/data_preprocessing.py
-    ```
+    
+    - `python scripts/data_preprocessing.py`
+    
 
 4. Train the model:
-    ```bash
-    python scripts/model_training.py
-    ```
+    
+    - `python scripts/model_training.py`
+    
 
 5. Validate the model:
-    ```bash
-    python scripts/validation_testing.py
-    ```
+    
+    - `python scripts/validation_testing.py`
+    
 
 ## Results
 
@@ -71,7 +70,6 @@ This project establishes a **Minimum Viable Product (MVP)** for an early risk de
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
----
 
 ## Author
 
