@@ -82,14 +82,9 @@ The following operational parameters are used as features for predicting battery
 - **Pressure**: Pressure readings during the assembly process.
 - **Liquid Level**: Coolant level around cells (for immersion-cooled systems).
 
-Example code for defining the features:
+code for defining the features:
 
-features = [
-    'voltage', 'current', 'temperature', 'soc', 'soh', 
-    'internal_resistance', 'cycle_count', 'discharge_time', 
-    'charge_time', 'formation_energy', 'aging_time', 
-    'ambient_temperature', 'pressure', 'liquid_level'
-]
+ `features = ['voltage', 'current', 'temperature', 'soc', 'soh', 'internal_resistance', 'cycle_count', 'discharge_time', 'charge_time', 'formation_energy', 'aging_time', 'ambient_temperature', 'pressure', 'liquid_level']`  #use PCA to incorportate important features
 
 ## Results
 
