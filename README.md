@@ -118,13 +118,6 @@ The early risk detection system has achieved the following outcomes:
   
 The following plots provide a detailed view of the model's performance:
 
-1. **Confusion Matrix**  
-   ![Confusion Matrix](results/confusion_matrix.png)  
-   This plot shows the classification performance between high-risk and low-risk battery cells.  
-   - The model correctly predicted 25 high-risk cases and 25 low-risk cases.
-   - It misclassified 31 high-risk cells as low-risk and 19 low-risk cells as high-risk.
-   - The matrix gives insight into the overall classification accuracy, as well as areas where the model could be improved (i.e., reducing false positives and false negatives).
-
    ### Confusion Matrix Definitions
 
     In the context of a binary classification model, the confusion matrix helps visualize the performance of the model by comparing the actual and predicted classifications. The matrix includes:
@@ -184,6 +177,13 @@ The following plots provide a detailed view of the model's performance:
 
     Then, applying the formulas will help calculate key performance metrics such as accuracy, precision, recall, F1 score, and others.
 
+1. **Confusion Matrix**  
+   ![Confusion Matrix](results/confusion_matrix.png)  
+   This plot shows the classification performance between high-risk and low-risk battery cells.  
+   - The model correctly predicted 2536 high-risk cases and 2555 low-risk cases.
+   - It misclassified 2501 high-risk cells as low-risk and 2408 low-risk cells as high-risk.
+   - The matrix gives insight into the overall classification accuracy, as well as areas where the model could be improved (i.e., reducing false positives and false negatives).
+   
 2. **ROC Curve**  
    ![ROC Curve](results/roc_curve.png) 
    - The ROC curve illustrates the trade-off between the true positive rate and false positive rate, with an improved AUC score of 0.84, showing better classification performance.
