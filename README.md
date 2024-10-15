@@ -63,29 +63,24 @@ This project establishes a **Minimum Viable Product (MVP)** for an early risk de
 
 In the context of battery cell manufacturing, the features (inputs) represent various operational parameters collected during different stages (formation, aging, testing). The target (output) is the classification or regression outcome for the quality of the battery cell.
 
-### 1. Features (Inputs)
+### 1. Features (Inputs) Aligned with Target Risk Level
 
-The following operational parameters are used as features for predicting battery cell quality:
+The features collected during battery manufacturing help determine whether a battery cell is classified as **high-risk** or **low-risk**. Deviations from expected values indicate increased risk, while consistency suggests lower risk.
 
-- **Voltage**: Voltage readings during battery operation.
-- **Current**: Current drawn or supplied by the battery.
-- **Temperature**: Internal and ambient temperatures during operation.
-- **SOC (State of Charge)**: Estimated remaining charge.
-- **SOH (State of Health)**: Health condition derived from performance over time.
-- **Internal Resistance**: Resistance within the battery.
-- **Cycle Count**: Number of charge/discharge cycles.
-- **Discharge Time**: Time taken to discharge from full charge.
-- **Charge Time**: Time taken to reach full charge.
-- **Formation Energy**: Energy input during the formation process.
-- **Aging Time**: Time spent in the aging process.
-- **Ambient Temperature**: External temperature during testing.
-- **Pressure**: Pressure readings during the assembly process.
-- **Liquid Level**: Coolant level around cells (for immersion-cooled systems).
+- **Electrode Coating Weight & Thickness**: Variations in weight and thickness affect conductivity, leading to high or low risk.
+- **Electrode Alignment**: Misalignment can cause short circuits (high risk); proper alignment signals low risk.
+- **Welding Bead Size**: Irregular bead size weakens connections, increasing the risk of failure.
+- **Lug Dimensions**: Inconsistent dimensions impact current flow, raising risk levels.
+- **Moisture Content**: Excess moisture post-baking raises contamination risk.
+- **Electrolyte Weight**: Deviations affect ion transport, increasing failure risks.
+- **Pressure & Temperature**: Extreme conditions during manufacturing increase the likelihood of defects.
+- **Formation Energy & Aging Time**: Deviations in these processes indicate higher risk of degradation.
+- **Cycle Count**: Higher cycle count signals aging, increasing risk.
 
-code for defining the features:
+#### Feature Selection in Code
 
- `features = ['voltage', 'current', 'temperature', 'soc', 'soh', 'internal_resistance', 'cycle_count', 'discharge_time', 'charge_time', 'formation_energy', 'aging_time', 'ambient_temperature', 'pressure', 'liquid_level']`  #use PCA to incorportate important features
-
+`features = ['positive_electrode_viscosity', 'negative_electrode_viscosity', 'electrode_coating_weight', 'electrode_thickness', 'electrode_alignment','welding_bead_size', 'lug_dimensions', 'moisture_content_after_baking', 'electrolyte_weight', 'formation_energy', 'aging_time', 'pressure', 'ambient_temperature']`
+ 
 ## Results
 
 The early risk detection system has achieved the following outcomes:
@@ -165,7 +160,6 @@ The following plots provide a detailed view of the model's performance:
     - FN = 31
 
     Then, applying the formulas will help calculate key performance metrics such as accuracy, precision, recall, F1 score, and others.
-
 
 2. **ROC Curve**  
    ![ROC Curve](results/roc_curve.png) 
