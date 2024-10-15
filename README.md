@@ -23,21 +23,31 @@ This project establishes a **Minimum Viable Product (MVP)** for an early risk de
 ## Project Structure
 
 - `data/`:  
-   *Note: Due to confidentiality agreements, the raw and processed data used for model training and testing cannot be provided. Please refer to the README for guidance on simulating data or using similar publicly available datasets for experimentation.*
-  
+   *Note: Due to confidentiality agreements, the raw and processed data used for model training and testing cannot be provided.*
+
 - `scripts/`:  
   - `data_preprocessing.py`: Preprocess data and handle missing values.  
-  - `model_training.py`: Train machine learning models for risk detection.  
-  - `mes_integration.py`: Communicate with MES using custom API.  
-  - `validation_testing.py`: Evaluate the model on new test data.
+  - `model_training.py`: Train machine learning models for binary risk detection (high vs low risk).  
+  - `model_training_multiclass.py`: Train multi-class risk classification models using LSTM (low, medium, high risk).  
+  - `time_series_cv.py`: Implement time-series cross-validation (Rolling/Expanding Window) for model evaluation.  
+  - `mes_integration.py`: Communicate with MES using custom API for real-time data exchange.  
+  - `validation_testing.py`: Evaluate model performance on test data.
   
-- `results/`: Metrics, plots, and evaluation results from model testing.
+- `results/`:  
+  - `confusion_matrix.png`: Confusion matrix of model predictions.  
+  - `roc_curve.png`: ROC curve for model evaluation.  
+  - `risk_score_distribution.png`: Distribution of predicted risk scores.  
+  - Other plots and metrics from model testing and validation.
 
-- `models/`: Trained models stored for further use.
+- `models/`:  
+  - `binary_model.h5`: Trained binary classification model.  
+  - `multiclass_model.h5`: Trained multi-class classification model.  
+  - `scaler.pkl`: Scaler object used for feature normalization.
 
-- `README.md`: Project documentation.
+- `README.md`: Project documentation, including detailed explanation of features, targets, and results.
 
 - `requirements.txt`: Dependencies required to run the project.
+
 
 ## Data Usage
 
