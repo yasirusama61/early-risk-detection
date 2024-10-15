@@ -109,8 +109,7 @@ The following plots provide a detailed view of the model's performance:
 
 2. **ROC Curve**  
    ![ROC Curve](results/roc_curve.png)  
-   The ROC curve illustrates the trade-off between the true positive rate and the false positive rate.  
-   - An AUC score of 0.93 indicates strong classification performance.
+   - The ROC curve illustrates the trade-off between the true positive rate and false positive rate, with an improved AUC score of 0.84, showing better classification performance.
    - The curve shows how well the model distinguishes between the high-risk and low-risk classes at various thresholds.
 
 3. **Risk Score Distribution**  
