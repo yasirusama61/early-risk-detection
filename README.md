@@ -118,64 +118,64 @@ The early risk detection system has achieved the following outcomes:
   
 The following plots provide a detailed view of the model's performance:
 
-   ### Confusion Matrix Definitions
+### Confusion Matrix Definitions
 
-    In the context of a binary classification model, the confusion matrix helps visualize the performance of the model by comparing the actual and predicted classifications. The matrix includes:
+In the context of a binary classification model, the confusion matrix helps visualize the performance of the model by comparing the actual and predicted classifications. The matrix includes:
 
-    - **True Positives (TP):** Correctly predicted high-risk battery cells.  
-    - **True Negatives (TN):** Correctly predicted low-risk battery cells.  
-    - **False Positives (FP):** Incorrectly predicted high-risk battery cells (false alarm).  
-    - **False Negatives (FN):** Incorrectly predicted low-risk battery cells (missed risk).
+- **True Positives (TP):** Correctly predicted high-risk battery cells.  
+- **True Negatives (TN):** Correctly predicted low-risk battery cells.  
+- **False Positives (FP):** Incorrectly predicted high-risk battery cells (false alarm).  
+- **False Negatives (FN):** Incorrectly predicted low-risk battery cells (missed risk).
 
-    ### Confusion Matrix Structure:
+### Confusion Matrix Structure:
 
-    |                       | Predicted Low Risk (0) | Predicted High Risk (1) |
-    |----------------------- |-----------------------|--------------------------|
-    | **Actual Low Risk (0)** | TN                    | FP                        |
-    | **Actual High Risk (1)**| FN                    | TP                        |
+|                       | Predicted Low Risk (0) | Predicted High Risk (1) |
+|----------------------- |-----------------------|--------------------------|
+| **Actual Low Risk (0)** | TN                    | FP                        |
+| **Actual High Risk (1)**| FN                    | TP                        |
 
-    ### Key Metrics:
+### Key Metrics:
 
-    - **True Positive (TP):** The number of correctly predicted positive examples (high-risk battery cells).
-    - **True Negative (TN):** The number of correctly predicted negative examples (low-risk battery cells).
-    - **False Positive (FP):** The number of incorrectly predicted positive examples (high-risk battery cells).
-    - **False Negative (FN):** The number of incorrectly predicted negative examples (low-risk battery cells).
+- **True Positive (TP):** The number of correctly predicted positive examples (high-risk battery cells).
+- **True Negative (TN):** The number of correctly predicted negative examples (low-risk battery cells).
+- **False Positive (FP):** The number of incorrectly predicted positive examples (high-risk battery cells).
+- **False Negative (FN):** The number of incorrectly predicted negative examples (low-risk battery cells).
 
-    ### Formulas for Derived Metrics:
+### Formulas for Derived Metrics:
 
-    1. **Accuracy:**  
-    Measures the overall performance of the model.  
-    `Accuracy = (TP + TN) / (TP + TN + FP + FN)`
+1. **Accuracy:**  
+Measures the overall performance of the model.  
+`Accuracy = (TP + TN) / (TP + TN + FP + FN)`
 
-    2. **Precision:**  
-    Measures the proportion of correctly predicted positive instances (high risk) out of all predicted positives.  
-    `Precision = TP / (TP + FP)`
+2. **Precision:**  
+Measures the proportion of correctly predicted positive instances (high risk) out of all predicted positives.  
+`Precision = TP / (TP + FP)`
 
-    3. **Recall (Sensitivity):**  
-    Measures the proportion of correctly predicted positive instances (high risk) out of all actual positives.  
-    `Recall = TP / (TP + FN)`
+3. **Recall (Sensitivity):**  
+Measures the proportion of correctly predicted positive instances (high risk) out of all actual positives.  
+`Recall = TP / (TP + FN)`
 
-    4. **F1 Score:**  
-    The harmonic mean of precision and recall, balancing the two metrics.  
-    `F1 Score = 2 * (Precision * Recall) / (Precision + Recall)`
+4. **F1 Score:**  
+The harmonic mean of precision and recall, balancing the two metrics.  
+`F1 Score = 2 * (Precision * Recall) / (Precision + Recall)`
 
-    5. **False Positive Rate (FPR):**  
-    Measures the proportion of incorrectly predicted positive instances out of all actual negatives.  
-    `FPR = FP / (FP + TN)`
+5. **False Positive Rate (FPR):**  
+Measures the proportion of incorrectly predicted positive instances out of all actual negatives.  
+`FPR = FP / (FP + TN)`
 
-    6. **True Negative Rate (Specificity):**  
-    Measures the proportion of correctly predicted negatives out of all actual negatives.  
-    `Specificity = TN / (TN + FP)`
+6. **True Negative Rate (Specificity):**  
+Measures the proportion of correctly predicted negatives out of all actual negatives.  
+`Specificity = TN / (TN + FP)`
 
-    ### Example:
+### Example:
 
-    If the confusion matrix shows:
-    - TP = 25
-    - TN = 25
-    - FP = 19
-    - FN = 31
+If the confusion matrix shows:
+- TP = 25
+- TN = 25
+- FP = 19
+- FN = 31
 
-    Then, applying the formulas will help calculate key performance metrics such as accuracy, precision, recall, F1 score, and others.
+Then, applying the formulas will help calculate key performance metrics such as accuracy, precision, recall, F1 score, and others.
 
 1. **Confusion Matrix**  
    ![Confusion Matrix](results/confusion_matrix.png)  
@@ -183,7 +183,7 @@ The following plots provide a detailed view of the model's performance:
    - The model correctly predicted 2536 high-risk cases and 2555 low-risk cases.
    - It misclassified 2501 high-risk cells as low-risk and 2408 low-risk cells as high-risk.
    - The matrix gives insight into the overall classification accuracy, as well as areas where the model could be improved (i.e., reducing false positives and false negatives).
-   
+
 2. **ROC Curve**  
    ![ROC Curve](results/roc_curve.png) 
    - The ROC curve illustrates the trade-off between the true positive rate and false positive rate, with an improved AUC score of 0.84, showing better classification performance.
