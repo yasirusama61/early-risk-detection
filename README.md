@@ -102,21 +102,28 @@ The following plots provide a detailed view of the model's performance:
 
 1. **Confusion Matrix**  
    ![Confusion Matrix](results/confusion_matrix.png)  
-   This plot shows the classification performance between high-risk and low-risk battery cells, indicating the model's ability to correctly predict the outcomes.
+   This plot shows the classification performance between high-risk and low-risk battery cells.  
+   - The model correctly predicted 25 high-risk cases and 25 low-risk cases.
+   - It misclassified 31 high-risk cells as low-risk and 19 low-risk cells as high-risk.
+   - The matrix gives insight into the overall classification accuracy, as well as areas where the model could be improved (i.e., reducing false positives and false negatives).
 
 2. **ROC Curve**  
    ![ROC Curve](results/roc_curve.png)  
-   The ROC curve illustrates the trade-off between the true positive rate and false positive rate, with an AUC score of 0.93, showing strong classification performance.
+   The ROC curve illustrates the trade-off between the true positive rate and the false positive rate.  
+   - An AUC score of 0.93 indicates strong classification performance.
+   - The curve shows how well the model distinguishes between the high-risk and low-risk classes at various thresholds.
 
 3. **Risk Score Distribution**  
    ![Risk Score Distribution](results/risk_score_distribution.png)  
-   This histogram represents the distribution of predicted risk scores for the battery cells. Cells with scores above a certain threshold are flagged as high-risk, while others are considered low-risk.
+   This histogram represents the distribution of predicted risk scores for the battery cells.  
+   - The x-axis represents the risk score, with higher scores indicating higher risk.
+   - Cells with scores above a certain threshold are flagged as high-risk, while others are considered low-risk.
+   - This distribution helps in identifying clusters of cells that require further testing or quality control actions.
 
 4. **Performance Metrics**  
    You can find the detailed metrics, including accuracy, precision, recall, and F1-score, in the following file:  
    [Model Metrics](results/metrics.txt)
 
-These results highlight the effectiveness of the early risk detection system in enhancing the quality control process and ensuring reliable battery cell production.
 
 ## License
 
