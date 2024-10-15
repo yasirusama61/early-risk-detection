@@ -108,7 +108,7 @@ The following plots provide a detailed view of the model's performance:
    - The matrix gives insight into the overall classification accuracy, as well as areas where the model could be improved (i.e., reducing false positives and false negatives).
 
 2. **ROC Curve**  
-   ![ROC Curve](results/roc_curve.png)  
+   ![ROC Curve](results/roc_curve.png) 
    - The ROC curve illustrates the trade-off between the true positive rate and false positive rate, with an improved AUC score of 0.84, showing better classification performance.
    - The curve shows how well the model distinguishes between the high-risk and low-risk classes at various thresholds.
 
@@ -117,7 +117,8 @@ The following plots provide a detailed view of the model's performance:
    This histogram represents the distribution of predicted risk scores for the battery cells.  
    - The x-axis represents the risk score, with higher scores indicating higher risk.
    - Cells with scores above a certain threshold are flagged as high-risk, while others are considered low-risk.
-   - This distribution helps in identifying clusters of cells that require further testing or quality control actions.
+
+   This distribution helps in identifying clusters of cells that require further testing or quality control actions.
    The Risk Score Distribution plot provides a histogram of predicted risk scores for the battery cells. The Kernel Density Estimate (KDE) curve superimposed on the histogram offers a smooth estimate of the distribution of the risk scores, showing how the scores are spread out.
    A horizontal threshold line at 7.5 indicates the high-risk cutoff. Cells with frequencies above this line are considered high-risk, while those below the threshold are low-risk. The KDE curve helps to visualize the underlying pattern in the risk scores, showing that most cells have lower risk scores, with fewer cells reaching the higher-risk range.
 
