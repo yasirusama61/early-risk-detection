@@ -65,17 +65,18 @@ In the context of battery cell manufacturing, the features (inputs) represent va
 
 ### 1. Features (Inputs) Aligned with Target Risk Level
 
-The features collected during battery manufacturing help determine whether a battery cell is classified as **high-risk** or **low-risk**. Deviations from expected values indicate increased risk, while consistency suggests lower risk.
+The features collected during the battery manufacturing process are essential for determining whether a battery cell is classified as high-risk or low-risk. Each feature relates to potential battery failure modes, and deviations from the standard process increase the risk.
 
-- **Electrode Coating Weight & Thickness**: Variations in weight and thickness affect conductivity, leading to high or low risk.
-- **Electrode Alignment**: Misalignment can cause short circuits (high risk); proper alignment signals low risk.
-- **Welding Bead Size**: Irregular bead size weakens connections, increasing the risk of failure.
-- **Lug Dimensions**: Inconsistent dimensions impact current flow, raising risk levels.
-- **Moisture Content**: Excess moisture post-baking raises contamination risk.
-- **Electrolyte Weight**: Deviations affect ion transport, increasing failure risks.
-- **Pressure & Temperature**: Extreme conditions during manufacturing increase the likelihood of defects.
-- **Formation Energy & Aging Time**: Deviations in these processes indicate higher risk of degradation.
-- **Cycle Count**: Higher cycle count signals aging, increasing risk.
+- **Positive/Negative Electrode Coating Weight (Area Density)**: Inconsistent or improper coating on the electrodes can lead to high resistance and reduced conductivity, increasing the risk of failure (high risk).
+- **Electrode Thickness (Positive & Negative)**: Variability in thickness can cause uneven ion transport, affecting performance. Thicker or uneven coatings suggest high risk, while uniform coatings indicate low risk.
+- **Electrode Alignment (Positive & Negative)**: Misalignment between electrodes may lead to short circuits or efficiency loss (high risk); proper alignment signals low risk.
+- **Welding Bead Size (Length & Width)**: Irregularities in the welding bead size could weaken connections, increasing resistance and causing heating issues (high risk).
+- **Lug Dimensions (Length & Width)**: Inconsistent lug dimensions affect the current flow, leading to inefficiencies and higher risk of failure (high risk).
+- **Moisture Content After Baking**: Excess moisture after the baking process increases the risk of contamination and degradation, leading to higher risk.
+- **Electrolyte Weight**: Deviations from the ideal electrolyte weight indicate issues in the manufacturing process. Insufficient electrolyte leads to poor ion transport, increasing the risk.
+- **Pressure and Temperature Measurements**: High or low pressure and extreme temperature conditions during the manufacturing process could lead to defects in the cell, marking it as high risk.
+- **Formation Energy & Aging Time**: Deviations from expected values in the formation process and accelerated aging increase the likelihood of degradation, marking cells as high risk.
+- **Cycle Count**: A higher cycle count generally correlates with cell degradation, leading to a higher risk classification.
 
 #### Feature Selection in Code
 
