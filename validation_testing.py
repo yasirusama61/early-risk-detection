@@ -66,10 +66,10 @@ if __name__ == "__main__":
 
     # Define feature columns and target column
     feature_columns = [
-        'voltage', 'current', 'temperature', 'soc', 'soh', 
-        'internal_resistance', 'cycle_count', 'discharge_time', 
-        'charge_time', 'formation_energy', 'aging_time', 
-        'ambient_temperature', 'pressure', 'liquid_level'
+        'positive_electrode_viscosity', 'negative_electrode_viscosity', 'electrode_coating_weight',
+        'electrode_thickness', 'electrode_alignment', 'welding_bead_size', 'lug_dimensions', 
+        'moisture_content_after_baking', 'electrolyte_weight', 'formation_energy', 'aging_time', 
+        'pressure', 'ambient_temperature'
     ]
     target_column = 'risk_category'  # Binary classification: 0 for low-risk, 1 for high-risk
 
