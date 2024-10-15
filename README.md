@@ -118,6 +118,8 @@ The following plots provide a detailed view of the model's performance:
    - The x-axis represents the risk score, with higher scores indicating higher risk.
    - Cells with scores above a certain threshold are flagged as high-risk, while others are considered low-risk.
    - This distribution helps in identifying clusters of cells that require further testing or quality control actions.
+   The Risk Score Distribution plot provides a histogram of predicted risk scores for the battery cells. The Kernel Density Estimate (KDE) curve superimposed on the histogram offers a smooth estimate of the distribution of the risk scores, showing how the scores are spread out.
+   A horizontal threshold line at 7.5 indicates the high-risk cutoff. Cells with frequencies above this line are considered high-risk, while those below the threshold are low-risk. The KDE curve helps to visualize the underlying pattern in the risk scores, showing that most cells have lower risk scores, with fewer cells reaching the higher-risk range.
 
 4. **Performance Metrics**  
    You can find the detailed metrics, including accuracy, precision, recall, and F1-score, in the following file:  
