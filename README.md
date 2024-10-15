@@ -22,16 +22,28 @@ This project establishes a **Minimum Viable Product (MVP)** for an early risk de
 
 ## Project Structure
 
-- `data/`: Raw and processed data for model training and testing.
-- `scripts/`:
-  - `data_preprocessing.py`: Preprocess data and handle missing values.
-  - `model_training.py`: Train machine learning models for risk detection.
-  - `mes_integration.py`: Communicate with MES using custom API.
+- `data/`:  
+   *Note: Due to confidentiality agreements, the raw and processed data used for model training and testing cannot be provided. Please refer to the README for guidance on simulating data or using similar publicly available datasets for experimentation.*
+  
+- `scripts/`:  
+  - `data_preprocessing.py`: Preprocess data and handle missing values.  
+  - `model_training.py`: Train machine learning models for risk detection.  
+  - `mes_integration.py`: Communicate with MES using custom API.  
   - `validation_testing.py`: Evaluate the model on new test data.
+  
 - `results/`: Metrics, plots, and evaluation results from model testing.
+
 - `models/`: Trained models stored for further use.
+
 - `README.md`: Project documentation.
+
 - `requirements.txt`: Dependencies required to run the project.
+
+## Data Usage
+
+Due to confidentiality agreements, the raw and processed data used in this project cannot be shared publicly. The data was collected during battery cell manufacturing and is proprietary to the project.
+
+For those looking to experiment with the system, you can use similar publicly available datasets or create synthetic data in a comparable format for experimentation purposes. Please adjust the scripts accordingly to match the data structure.
 
 ## Getting Started
 
