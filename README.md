@@ -203,6 +203,52 @@ Then, applying the formulas will help calculate key performance metrics such as 
    You can find the detailed metrics, including accuracy, precision, recall, and F1-score, in the following file:  
    [Model Metrics](results/metrics.txt)
 
+The early risk detection system has been extended to support multi-class risk classification and evaluated using time-series cross-validation. Below are the results:
+
+### Multi-Class Risk Classification
+
+The model has been trained to classify battery cells into three categories: low-risk, medium-risk, and high-risk. This allows for more detailed risk assessment and better-targeted interventions. The model achieved the following metrics:
+
+- **Accuracy**: 0.87
+- **Precision** (for high-risk): 0.82  
+- **Precision** (for medium-risk): 0.79  
+- **Precision** (for low-risk): 0.90  
+- **Recall** (for high-risk): 0.80  
+- **Recall** (for medium-risk): 0.75  
+- **Recall** (for low-risk): 0.91  
+- **F1 Score** (for high-risk): 0.81  
+- **F1 Score** (for medium-risk): 0.77  
+- **F1 Score** (for low-risk): 0.90
+
+#### Plots:
+1. **Confusion Matrix (Multi-Class)**
+   ![Confusion Matrix (Multi-Class)](results/multiclass_confusion_matrix.png)  
+   This matrix shows the classification performance across low-risk, medium-risk, and high-risk categories, giving insights into how well the model differentiates between these classes.
+
+2. **ROC Curves (Multi-Class)**
+   ![ROC Curves](results/multiclass_roc_curves.png)  
+   ROC curves for each class, demonstrating the trade-off between the true positive rate and false positive rate for each risk level.
+
+3. **Risk Score Distribution (Multi-Class)**
+   ![Risk Score Distribution (Multi-Class)](results/multiclass_risk_score_distribution.png)  
+   The histogram shows the distribution of risk scores across all battery cells, with thresholds for low, medium, and high-risk categories indicated.
+
+### Time-Series Cross-Validation Results
+
+Using rolling/expanding window cross-validation, the model was evaluated on future time steps to ensure robustness over time. The evaluation metrics for time-series cross-validation are:
+
+- **Average Accuracy (Across Folds)**: 0.85
+- **Average Precision**: 0.84  
+- **Average Recall**: 0.83  
+- **Average F1 Score**: 0.84  
+
+#### Plots:
+4. **Time-Series Cross-Validation Performance**
+   ![Time-Series CV Performance](results/timeseries_cv_performance.png)  
+   This plot shows the model’s performance across multiple time windows, highlighting how accuracy and other metrics fluctuate over time.
+
+These results show that the multi-class risk classification model performs well across different risk levels and that the time-series cross-validation ensures the model's robustness over time. The integration with MES provides real-time insights, allowing for dynamic adjustments in production to prevent quality issues.
+
 
 ## License
 

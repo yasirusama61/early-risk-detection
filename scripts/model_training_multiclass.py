@@ -18,7 +18,7 @@ features = [
     'moisture_content_after_baking', 'electrolyte_weight', 'formation_energy', 'aging_time', 
     'pressure', 'ambient_temperature'
 ]
-target = 'risk_level'  # Assume 'risk_level' has 3 classes: low, medium, high
+target = 'risk_level'  # for 'risk_level' with 3 classes: low, medium, high
 
 # Encode the target classes
 label_encoder = LabelEncoder()
