@@ -2,20 +2,21 @@
 
 ## Overview
 
-This project establishes a **Minimum Viable Product (MVP)** for an early risk detection system in **battery cell manufacturing**. It proactively identifies potential quality issues in real-time through machine learning and integrates with the **Manufacturing Execution System (MES)** for real-time monitoring.
+This project establishes a **Minimum Viable Product (MVP)** for an early risk detection system in **battery cell manufacturing**. It proactively identifies potential quality issues at various stages of production using machine learning models based on manufacturing parameters such as electrode viscosity, coating weight, electrolyte weight, and welding dimensions. The system integrates with the **Manufacturing Execution System (MES)** for real-time monitoring and risk categorization into **low**, **medium**, and **high-risk** categories.
 
 ## Features
 
-- **MVP Development**: Initial risk detection system focusing on core functionalities.
-- **Concept Verification**: Validates feasibility and algorithm performance.
-- **Iterative Refinement**: Continuous improvement using the PDCA cycle.
-- **MES Integration**: Integrated with MES using custom APIs and OPC-UA protocols.
-- **Validation Testing**: Rigorous testing across various conditions.
+- **MVP Development**: Initial risk detection system focusing on predicting high, medium, and low-risk battery cells.
+- **Multi-Stage Risk Classification**: Predicts battery cell risks across multiple stages of production (IPQC, FQC, OQC).
+- **Real-Time Monitoring**: Seamless integration with MES for real-time data-driven decision-making and monitoring.
+- **Dynamic Risk Visualization**: Uses interactive charts and plots to display quality metrics and risk score distributions.
+- **Iterative Refinement**: Continuous improvement using the PDCA (Plan-Do-Check-Act) cycle to optimize model performance.
+- **Validation Testing**: Extensive validation using time-series cross-validation and other robust evaluation methods.
 
 ## Tools and Technologies
 
 - **Programming**: Python, R
-- **Machine Learning Libraries**: Scikit-learn, TensorFlow
+- **Machine Learning Models**: Scikit-learn, TensorFlow, XGBoost
 - **Data Visualization**: Matplotlib, Plotly
 - **Database**: SQL, MongoDB
 - **MES Integration**: Custom APIs, OPC-UA protocols
