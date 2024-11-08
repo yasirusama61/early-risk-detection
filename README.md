@@ -1,5 +1,11 @@
 # 🚨 **Early Risk Detection System for Battery Cell Manufacturing**
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat&logo=python)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange?style=flat&logo=tensorflow)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-0.24%2B-yellow?style=flat&logo=scikit-learn)
+![Plotly](https://img.shields.io/badge/Plotly-4.14%2B-brightgreen?style=flat&logo=plotly)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat&logo=open-source-initiative)
+
 ## 📄 **Overview**
 
 This project develops a **Minimum Viable Product (MVP)** for an early risk detection system in **battery cell manufacturing**. The system utilizes machine learning to proactively identify quality risks across production stages by analyzing parameters like **electrode viscosity**, **coating weight**, **electrolyte weight**, and **welding dimensions**. Integrated with the **Manufacturing Execution System (MES)**, it enables **real-time monitoring** and classifies risks into **low**, **medium**, and **high** levels.
